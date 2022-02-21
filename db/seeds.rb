@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+greet = ['Hello Rails', 'Hi Rails!', 'What\'s going on Rails!', 'What\'s up Rails!', 'How do you do Rails!']
+
 5.times do |i|
-	Greeting.create message: "Hello, ##{i}!"
+	Greeting.create message: greet[i]
 end 
