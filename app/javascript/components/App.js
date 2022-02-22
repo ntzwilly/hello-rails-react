@@ -1,17 +1,16 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from 'react';
 
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Greeting from "./Greeting";
+import HelloWorld from './HelloWorld';
 
-const App = () => {
-      <BrowserRouter>
-        <Routes>
-          <Route path="/greeting" element={<Greeting />} />
-          <Route path="/" element={<Link to="/greeting">Get random greeting</Link>} />
-        </Routes>
-     </BrowserRouter>
-}
+const App = () => (
+    <Router>
+      <Routes>
+        <Route exact path="/" element={"Home!"} />
+        <Route path="/hello" element={<HelloWorld greeting="Friend" />} />
+      </Routes>
+    </Router>
+);
 
-export default App
+export default App;
