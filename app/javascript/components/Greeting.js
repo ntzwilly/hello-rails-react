@@ -10,7 +10,19 @@ const Greeting = () => {
     dispatch(fetchRandomGreeting());
   }, []);
 
-  return <h1>{message}</h1>;
+  const fetchGreeting = () => {
+    dispatch(fetchRandomGreeting());
+  };
+
+  return (
+    <div className="container">
+      <button type="button" onClick={() => fetchGreeting()} className="btn btn-primary mt-5 mb-5">
+              Get random greeting
+            </button>
+      <h2>{message}</h2>
+    </div>
+    ) 
+    
 };
 
 export default Greeting;

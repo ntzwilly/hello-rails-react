@@ -15,11 +15,12 @@ const App = () => (
     <Router>
       <LoadingBar />
       <Routes>
-      <Route path="/greeting" element={<Greeting />} />
         <Route
+          exact
           path="/"
           element={<Link to="/greeting">Get random greeting</Link>}
         />
+        <Route path="/greeting" element={<Greeting />} />
       </Routes>
     </Router>
   </Provider>
