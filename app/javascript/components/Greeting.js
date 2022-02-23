@@ -6,11 +6,13 @@ const Greeting = () => {
   const dispatch = useDispatch();
   const { message } = useSelector((state) => state.greetings);
 
+  console.log(message);
+
   useEffect(() => {
     dispatch(fetchRandomGreeting());
   }, []);
 
-  return <h1>{message}</h1>;
+  return <h2>{message}</h2>;
 };
 
 export default Greeting;
